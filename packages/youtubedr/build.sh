@@ -22,7 +22,8 @@ termux_step_make() {
 }
 
 termux_step_make_install() {
-	install -Dm700 -t "$TERMUX_PREFIX"/bin "$GOPATH"/src/github.com/kkdai/youtube/cmd/youtubedr/youtubedr
+	install -Dm700 -t "$TERMUX_PKG_MASSAGEDIR/$TERMUX_PREFIX"/bin \
+		"$GOPATH"/src/github.com/kkdai/youtube/cmd/youtubedr/youtubedr
 }
 
 termux_step_create_debscripts() {
